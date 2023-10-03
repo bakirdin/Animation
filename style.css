@@ -1,0 +1,59 @@
+#box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(243, 239, 10);
+    animation: none;
+}
+
+@keyframes moveHorizontal {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 500px;
+    }
+}
+
+@keyframes resizeAnimation {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(2.5);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #c5a241;
+    }
+
+    25% {
+        background-color: #3414e6;
+    }
+
+    50% {
+        background-color: #0deb4f;
+    }
+
+    75% {
+        background-color: #c272b4;
+    }
+
+    100% {
+        background-color: #14bac0;
+    }
+}
+
+#box:hover {
+    animation: moveHorizontal 2s linear forwards;
+}
+
+#box:active {
+    animation: resizeAnimation 1s ease-in-out;
+}
+
+#box {
+    animation: changeColor 5s infinite;
+}
